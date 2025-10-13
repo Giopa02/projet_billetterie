@@ -15,6 +15,7 @@ Contrairement à une application web (client léger), un client lourd exécute l
 ⸻
 
 🧠 Objectifs du projet
+	
 	•	Concevoir et modéliser la structure de l’application (diagrammes UML, MCD/MLD).
 	•	Créer la base de données nécessaire à la gestion des événements et des billets.
 	•	Développer l’interface et la logique applicative en Java.
@@ -24,6 +25,7 @@ Contrairement à une application web (client léger), un client lourd exécute l
 ⸻
 
 🛠️ Technologies utilisées
+	
 	•	Langage : Java
 	•	Base de données : MySQL / MariaDB
 	•	Outils : IntelliJ IDEA / VS Code / DBeaver
