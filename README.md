@@ -1,7 +1,4 @@
-# projet_billetterie
-Application de billetterie en client lourd pour la gestion des événements et des réservations.
-
-🎟️ Projet de billetterie – Application client lourd
+# 🎟️ Projet de billetterie – Application client lourd
 
 📚 Contexte
 
