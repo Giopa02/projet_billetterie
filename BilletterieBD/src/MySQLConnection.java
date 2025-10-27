@@ -8,11 +8,7 @@ public class MySQLConnection {
             var jdbcUrl = DatabaseConfig.getDbUrl();
             var user = DatabaseConfig.getDbUsername();
             var password = DatabaseConfig.getDbPassword();
-            
-            // Uncomment if code above doesn't work
-            // var jdbcUrl = "jdbc:mysql://localhost:8889/billetterie_db";
-            // var user = "root";
-            // var password = "root";
+         
 
             return DriverManager.getConnection(jdbcUrl, user, password);
 
@@ -21,4 +17,5 @@ public class MySQLConnection {
             throw e;
         }
     }
+
 }
