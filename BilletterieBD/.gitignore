@@ -1,0 +1,93 @@
+# Fichiers compilés Java
+*.class
+src/bin/
+bin/
+
+# Bibliothèques externes (à ne pas versionner si elles sont téléchargeables)
+# Décommentez la ligne suivante si vous voulez ignorer les JAR
+# *.jar
+
+# Garder le driver MySQL (nécessaire au projet)
+!lib/mysql-connector-j-9.4.0.jar
+
+# Fichiers de configuration IDE
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Fichiers système macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Fichiers système Windows
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.log
+*.swp
+*.swo
+*~
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+
+# Fichiers de compilation
+build/
+target/
+out/
+dist/
+
+# Fichiers de dépendances (si vous utilisez Maven/Gradle plus tard)
+.m2/
+.gradle/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Fichiers de test
+test-output/
+*.test
+
+# Fichiers de configuration de base de données (ne jamais versionner les mots de passe !)
+config.properties
+database.properties
+db.properties
+*config*.properties
+
+# Fichiers de logs
+logs/
+*.log.*
+
+# Fichiers NetBeans (au cas où)
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Fichiers Eclipse (au cas où)
+.classpath
+.project
+.settings/
+
+# Fichiers de packaging
+*.war
+*.ear
+*.nar
+*.zip
+*.tar.gz
+*.rar
