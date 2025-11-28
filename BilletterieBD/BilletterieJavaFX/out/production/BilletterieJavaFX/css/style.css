@@ -1,0 +1,330 @@
+/* ========================================
+   STYLE MODERNE - PROJET BILLETTERIE
+   Style réutilisable pour toutes les interfaces
+   ======================================== */
+
+/* === POLICE ET COULEURS GLOBALES === */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-base: #f5f5f5;
+    -fx-background: #ffffff;
+    -fx-accent: #2196F3;
+}
+
+/* === CONTENEUR PRINCIPAL === */
+.border-pane {
+    -fx-background-color: #f8f9fa;
+}
+
+/* === TITRE DE PAGE === */
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a1a1a;
+    -fx-padding: 20px 0 15px 0;
+    -fx-background-color: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
+    -fx-border-color: transparent transparent #e0e0e0 transparent;
+    -fx-border-width: 0 0 2px 0;
+}
+
+/* === FORMULAIRE === */
+.form-container {
+    -fx-padding: 25px;
+    -fx-spacing: 18px;
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+/* === LIGNES DU FORMULAIRE === */
+.form-row {
+    -fx-spacing: 15px;
+    -fx-padding: 5px 0;
+    -fx-alignment: center-left;
+}
+
+/* === LABELS === */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #495057;
+    -fx-min-width: 100px;
+}
+
+/* === CHAMPS DE TEXTE === */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 10px 15px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #212529;
+    -fx-pref-width: 300px;
+}
+
+.text-field:focused {
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(33, 150, 243, 0.3), 5, 0, 0, 0);
+}
+
+.text-field:hover {
+    -fx-border-color: #adb5bd;
+}
+
+/* === RECHERCHE === */
+.search-container {
+    -fx-padding: 20px 25px;
+    -fx-spacing: 10px;
+    -fx-alignment: center-left;
+    -fx-background-color: #ffffff;
+}
+
+.search-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 25px;
+    -fx-background-radius: 25px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-pref-width: 350px;
+}
+
+.search-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #2196F3;
+    -fx-border-width: 2px;
+}
+
+/* === BOUTONS === */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-padding: 12px 24px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4, 0, 0, 2);
+}
+
+.button:hover {
+    -fx-scale-y: 1.02;
+    -fx-scale-x: 1.02;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 8, 0, 0, 3);
+}
+
+.button:pressed {
+    -fx-scale-y: 0.98;
+    -fx-scale-x: 0.98;
+}
+
+/* Bouton Ajouter (Vert) */
+.btn-add {
+    -fx-background-color: linear-gradient(to bottom, #4CAF50 0%, #45a049 100%);
+    -fx-text-fill: white;
+}
+
+.btn-add:hover {
+    -fx-background-color: linear-gradient(to bottom, #45a049 0%, #3d8b40 100%);
+}
+
+/* Bouton Modifier (Bleu) */
+.btn-edit {
+    -fx-background-color: linear-gradient(to bottom, #2196F3 0%, #1976D2 100%);
+    -fx-text-fill: white;
+}
+
+.btn-edit:hover {
+    -fx-background-color: linear-gradient(to bottom, #1976D2 0%, #1565C0 100%);
+}
+
+/* Bouton Supprimer (Rouge) */
+.btn-delete {
+    -fx-background-color: linear-gradient(to bottom, #f44336 0%, #d32f2f 100%);
+    -fx-text-fill: white;
+}
+
+.btn-delete:hover {
+    -fx-background-color: linear-gradient(to bottom, #d32f2f 0%, #c62828 100%);
+}
+
+/* Bouton Recherche (Icône) */
+.btn-search {
+    -fx-background-color: linear-gradient(to bottom, #607D8B 0%, #546E7A 100%);
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 25px;
+}
+
+.btn-search:hover {
+    -fx-background-color: linear-gradient(to bottom, #546E7A 0%, #455A64 100%);
+}
+
+/* Bouton Secondaire (Gris) */
+.btn-secondary {
+    -fx-background-color: linear-gradient(to bottom, #6c757d 0%, #5a6268 100%);
+    -fx-text-fill: white;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: linear-gradient(to bottom, #5a6268 0%, #545b62 100%);
+}
+
+/* === CONTENEUR DES BOUTONS === */
+.button-bar {
+    -fx-spacing: 15px;
+    -fx-padding: 10px 0;
+    -fx-alignment: center-left;
+}
+
+/* === TABLEAU === */
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%);
+    -fx-border-color: transparent transparent #dee2e6 transparent;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-padding: 12px 8px;
+}
+
+.table-view .table-cell {
+    -fx-padding: 12px 8px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #212529;
+    -fx-border-color: transparent transparent #f1f3f5 transparent;
+}
+
+.table-row-cell {
+    -fx-background-color: #ffffff;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #1565C0;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #f0f4ff;
+}
+
+/* === SCROLLBAR (Barre de défilement) === */
+.scroll-bar {
+    -fx-background-color: #f8f9fa;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #ced4da;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #adb5bd;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #f8f9fa;
+}
+
+/* === ESPACEMENT ET MARGES === */
+.spacing-small {
+    -fx-spacing: 10px;
+}
+
+.spacing-medium {
+    -fx-spacing: 15px;
+}
+
+.spacing-large {
+    -fx-spacing: 20px;
+}
+
+.padding-small {
+    -fx-padding: 10px;
+}
+
+.padding-medium {
+    -fx-padding: 20px;
+}
+
+.padding-large {
+    -fx-padding: 30px;
+}
+
+/* === CARDS (pour sections séparées) === */
+.card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/* === SECTION TABLE === */
+.table-section {
+    -fx-padding: 18px 24px 20px 24px;
+}
+
+.table-section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* === SÉPARATEUR === */
+.separator {
+    -fx-background-color: #e9ecef;
+    -fx-padding: 1px;
+}
+
+/* === MESSAGES D'ERREUR/SUCCÈS === */
+.error-message {
+    -fx-text-fill: #dc3545;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 0;
+}
+
+.success-message {
+    -fx-text-fill: #28a745;
+    -fx-font-size: 12px;
+    -fx-padding: 5px 0;
+}
+
+/* === ANIMATIONS === */
+.fade-in {
+    -fx-opacity: 0;
+}
+
+/* === RESPONSIVE === */
+.container-small {
+    -fx-max-width: 600px;
+}
+
+.container-medium {
+    -fx-max-width: 900px;
+}
+
+.container-large {
+    -fx-max-width: 1200px;
+}
