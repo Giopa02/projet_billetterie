@@ -22,7 +22,7 @@ import java.util.Objects;
 
 /**
  * Contrôleur pour la gestion des événements
- * ✅ VERSION AVANCÉE avec multi-horaires et multi-salles + Navigation
+ * ✅ VERSION CORRIGÉE - Affichage des horaires et salles dans ListView
  */
 public class EvenementTabController {
 
@@ -71,7 +71,7 @@ public class EvenementTabController {
     // ===== INITIALISATION =====
     @FXML
     public void initialize() {
-        System.out.println("✓ EvenementController initialisé (Version avancée avec navigation)");
+        System.out.println("✓ EvenementController initialisé (Version corrigée affichage)");
 
         // Configurer les colonnes du tableau
         colId.setCellValueFactory(new PropertyValueFactory<>("idEvenement"));
@@ -91,6 +91,33 @@ public class EvenementTabController {
         // Lier les ListView aux listes temporaires
         lvHoraires.setItems(horairesTemp);
         lvSalles.setItems(sallesTemp);
+
+        // ✅ CORRECTION : Configurer l'affichage des horaires dans la ListView
+        lvHoraires.setCellFactory(param -> new ListCell<HoraireModel>() {
+            @Override
+            protected void updateItem(HoraireModel horaire, boolean empty) {
+                super.updateItem(horaire, empty);
+                if (empty || horaire == null) {
+                    setText(null);
+                } else {
+                    // Afficher l'horaire au format "HH:MM - HH:MM"
+                    setText(horaire.getHeureDebut() + " - " + horaire.getHeureFin());
+                }
+            }
+        });
+
+        // ✅ CORRECTION : Configurer l'affichage des salles dans la ListView
+        lvSalles.setCellFactory(param -> new ListCell<SalleModel>() {
+            @Override
+            protected void updateItem(SalleModel salle, boolean empty) {
+                super.updateItem(salle, empty);
+                if (empty || salle == null) {
+                    setText(null);
+                } else {
+                    setText(salle.getNomSalle());
+                }
+            }
+        });
 
         // Charger les salles disponibles dans la ComboBox
         chargerSallesDisponibles();
@@ -144,7 +171,7 @@ public class EvenementTabController {
             tfHeureDebut.clear();
             tfHeureFin.clear();
 
-            System.out.println("✓ Horaire ajouté : " + horaire);
+            System.out.println("✓ Horaire ajouté : " + horaire.getHeureDebut() + " - " + horaire.getHeureFin());
 
         } catch (Exception e) {
             afficherErreur("Erreur lors de l'ajout de l'horaire : " + e.getMessage());
